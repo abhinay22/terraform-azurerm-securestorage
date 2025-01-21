@@ -19,7 +19,7 @@ resource "azurerm_storage_account" "securestorage" {
     name=var.storageaccountname 
     location = var.location
     resource_group_name = var.resourcegroupname
-    account_tier =var.environment=="production"?"Premium":"Standard"
+    account_tier =var.environment=="production"?"Standard":"Standard"
     account_replication_type = var.environment=="production"?"GRS":"LRS"
     tags = local.tags
 }
